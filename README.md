@@ -12,8 +12,7 @@ Conhecimentos Necessário:
 INICIANDO O PROJETO <br>
 
        
-       - composer create-project --prefer-dist Laravel/Laravel receita_gastronomica
-            CREATE TABLE PESSOA (
+                   CREATE TABLE PESSOA (
                                  ID INT  NOT NULL PRIMARY KEY AUTO_INCREMENT,
                         NOME VARCHAR(50),
                         ID_CARGO INT 
@@ -30,22 +29,12 @@ INICIANDO O PROJETO <br>
      
 2) inserindo valores nas tabelas    
 
-               
-                    
-I)INSERT INTO CARGO (NOME) => referente a coluna da segunda tabela cargo VALUES ('PRESIDENTE') => o que vai ser atribuido ao campo da coluna cargo
-
              INSERT INTO CARGO (DESCRICAO) VALUES ('PRESIDENTE'),('DIRETOR'),('CHEFE');
-
-II) INSERT INTO PESSOA (NOME, ID_CARGO) => referente a primeira coluna da tabela pessoa, VALUES ('PRESIDENTE, 3') => o que vai ser atribuido aos campos da coluna pessoa
-
-            -   INSERT INTO PESSOA (NOME, ID_CARGO) VALUES ('RAIMUNDO', 1),('EUDETE', 2),('ALFREDO', 3);
+             INSERT INTO PESSOA (NOME, ID_CARGO) VALUES ('RAIMUNDO', 1),('EUDETE', 2),('ALFREDO', 3);
 
 
-3) realizar o relacionamentos das tabelas  INNER JOIN
+3) RELACIONA AS TABELAS E EXIBI POR MEIOS DAS CHAVES PRIMEIRA E ESTRANGEIRAS = INNER JOIN
             
-INNER JOINT = RELACIONA AS TABELAS E EXIBI POR MEIOS DAS CHAVES PRIMEIRA E ESTRANGEIRAS 
-
-
               SELECT pessoa.NOME, cargo.DESCRICAO FROM PESSOA  INNER JOIN CARGO  ON PESSOA.ID_CARGO = CARGO.ID;
 
 4) claussulas de condigoçoes WHERE 
