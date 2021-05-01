@@ -9,7 +9,7 @@ Conhecimentos Necessário:
     --->  HTML5 + PHP +  SQL + POO  
     
     
-INICIANDO O PROJETO <br>
+INICIANDO O PROJETO <br> 
 
        
              CREATE TABLE PESSOA (
@@ -44,11 +44,11 @@ INICIANDO O PROJETO <br>
 5.1) criar o formulario <br>
 
               
-              <h1>Formulario de Pesquisa</h1>
-              <form method="POST" action="pesquisar.php">
-              Pesquisar:<input type="text" name="pesquisar" placeholder="pesquisar">
-              <input type="submit" value="Enviar">
-              </form>
+             <h1>Formulario de Pesquisa</h1>
+             <form method="POST" action="pesquisar.php">
+             Pesquisar:<input type="text" name="pesquisar" placeholder="pesquisar">
+             <input type="submit" value="Enviar">
+             </form>
     
 6) conectar o php com banco de dados   
     
@@ -87,4 +87,7 @@ INICIANDO O PROJETO <br>
           };
           ?>
                     
+                    
+                   
+<br><<br> DCUMENTAÇÃO MAIS DETALHADA NOS CÓDIGOS ;)
                     
