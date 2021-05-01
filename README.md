@@ -89,5 +89,5 @@ INICIANDO O PROJETO <br>
                     
                     
                    
-<br><<br> DCUMENTAÇÃO MAIS DETALHADA NOS CÓDIGOS ;)
+<br><br><<br> DCUMENTAÇÃO MAIS DETALHADA NOS CÓDIGOS ;)
                     
