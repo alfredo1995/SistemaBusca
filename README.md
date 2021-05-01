@@ -12,18 +12,17 @@ Conhecimentos Necessário:
 INICIANDO O PROJETO <br>
 
        
-                   CREATE TABLE PESSOA (
-                                 ID INT  NOT NULL PRIMARY KEY AUTO_INCREMENT,
-                        NOME VARCHAR(50),
-                        ID_CARGO INT 
-                    );
+             CREATE TABLE PESSOA (
+             ID INT  NOT NULL PRIMARY KEY AUTO_INCREMENT,
+             NOME VARCHAR(50),
+             ID_CARGO INT 
+             );
+             CREATE TABLE CARGO (
+             ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+             DESCRICAO VARCHAR (50)
+             );
 
-                    CREATE TABLE CARGO (
-                        ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-                        DESCRICAO VARCHAR (50)
-                    );
-
-                    ALTER TABLE PESSOA ADD CONSTRAINT FOREIGN KEY (ID) REFERENCES CARGO (ID);
+             ALTER TABLE PESSOA ADD CONSTRAINT FOREIGN KEY (ID) REFERENCES CARGO (ID);
                     
                     
      
@@ -45,47 +44,47 @@ INICIANDO O PROJETO <br>
 5.1) criar o formulario <br>
 
               
-                    <h1>Formulario de Pesquisa</h1>
-                    <form method="POST" action="pesquisar.php">
-                    Pesquisar:<input type="text" name="pesquisar" placeholder="pesquisar">
-                    <input type="submit" value="Enviar">
-                    </form>
+              <h1>Formulario de Pesquisa</h1>
+              <form method="POST" action="pesquisar.php">
+              Pesquisar:<input type="text" name="pesquisar" placeholder="pesquisar">
+              <input type="submit" value="Enviar">
+              </form>
     
 6) conectar o php com banco de dados   
     
                     
-                    <?php
-                    $servidor = "localhost";
-                    $usuario = "root";
-                    $senha = "root";
-                    $dbname = "conlusta";
+             <?php
+             $servidor = "localhost";
+             $usuario = "root";
+             $senha = "root";
+             $dbname = "consulta";
 
 7)  criar a conexao com o bando de dados <br>
 
                  
-                    $conn = mysqli_connect($servidor, $usuario, $senha, $dbname); qualquer um dos dois funciona
-                    $conn = new mysqli($servidor, $usuario, $senha, $dbname);     qualquer um dos dois funciona
+            $conn = mysqli_connect($servidor, $usuario, $senha, $dbname);         qualquer um dos dois funciona / estruturado
+            $conn = new mysqli($servidor, $usuario, $senha, $dbname);             qualquer um dos dois funciona / pdo
                     
 8)  receber os dados no formulario <br>
 
                
-                $pesquisar = $_POST['pesquisar'];   
+           $pesquisar = $_POST['pesquisar'];   
                 
                 
 9) criar instrução     <br>
   
                
-                "SELECT * FROM pessoa WHERE nome LIKE '%$pesquisar%' LIMIT 5"
+           "SELECT * FROM pessoa WHERE nome LIKE '%$pesquisar%' LIMIT 5"
                 
 10)  criar a variavel que vai receber os atributos <br>
 
-               $resultado_pessoa = mysqli_query($conn, $result_pessoa);
+           $resultado_pessoa = mysqli_query($conn, $result_pessoa);
                
 11) ler as informações // mysqli fetch array pra le todas as informaçoes da vaivel ($resultado_pessoa) [nomedocampo] <br>
                 
-                 while ($rows_pessoa = mysqli_fetch_array($resultado_pessoa)) {
-                 echo $rows_pessoa['NOME'];
-                 };
-                 ?>
+          while ($rows_pessoa = mysqli_fetch_array($resultado_pessoa)) {
+          echo $rows_pessoa['NOME'];
+          };
+          ?>
                     
                     
