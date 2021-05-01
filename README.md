@@ -2,7 +2,7 @@ Sistema de Busca em PHP <br>
 
 Instalações Necessárias: 
     
-    --->  PHP 8 + XAMPP + MYSQL WORKBENCH
+    --->  PHP 8 + WAPP + MYSQL WORKBENCH
 
 Conhecimentos Necessário: 
 
@@ -49,19 +49,11 @@ FOREIGN KEY (ID_CARGO) -> chave estrangeira com o id_cargo  REFERENCES CARGO(ID)
 
                
                     
-INTO inserindo atributos no campos das colunas das tabelas kkkk
-INSERT INTO CARGO (NOME) => referente as colunas
-VALUES ('PRESIDENTE') => o que vai ser atribuido ao campo da coluna 
-
-I)
-	INSERT INTO CARGO (NOME) => referente a coluna da segunda tabela cargo
-	VALUES ('PRESIDENTE') => o que vai ser atribuido ao campo da coluna cargo
+I)INSERT INTO CARGO (NOME) => referente a coluna da segunda tabela cargo VALUES ('PRESIDENTE') => o que vai ser atribuido ao campo da coluna cargo
 
              INSERT INTO CARGO (DESCRICAO) VALUES ('PRESIDENTE'),('DIRETOR'),('CHEFE');
 
-II) 
-	INSERT INTO PESSOA (NOME, ID_CARGO) => referente a primeira coluna da tabela pessoa
-	VALUES ('PRESIDENTE, 3') => o que vai ser atribuido aos campos da coluna pessoa
+II) INSERT INTO PESSOA (NOME, ID_CARGO) => referente a primeira coluna da tabela pessoa, VALUES ('PRESIDENTE, 3') => o que vai ser atribuido aos campos da coluna pessoa
 
             -   INSERT INTO PESSOA (NOME, ID_CARGO) VALUES ('RAIMUNDO', 1),('EUDETE', 2),('ALFREDO', 3);
 
